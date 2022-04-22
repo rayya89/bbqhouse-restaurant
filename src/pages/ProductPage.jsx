@@ -30,8 +30,8 @@ if (status === 2) return <p>error</p>;
 
 
 //Components
-const IngredientL = document.ingredients.map((item)=>(
-    <li>{item}</li>
+const IngredientList = document.ingredients.map((item,index)=>(
+    <li key={index}>{item}</li>
 ));
 
   return (
@@ -40,7 +40,7 @@ const IngredientL = document.ingredients.map((item)=>(
       <h2>{document.name}</h2>
       <p>{document.longDescription}</p>
       <h2>Ingredients</h2>
-      <ul>{IngredientL}</ul>
+      <ul>{IngredientList}</ul>
       <span>Price: {document.price}:-</span>
       <button onClick={() => navigate(-1)}>Go back</button>
     </div>
