@@ -11,7 +11,7 @@ export default function HomePage() {
             <h1>BBQ House</h1>
             <span className='slogan'>Come hungry Leave happy</span>
             </div>
-            <Link to="Menu/">Go to Menu</Link>
+            <Link to="menu/">Go to Menu</Link>
         </div>
     </div>
   )
