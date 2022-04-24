@@ -40,7 +40,7 @@ const IngredientList = document.ingredients.map((item,index)=>(
       <h2>{document.name}</h2>
       <p>{document.longDescription}</p>
       <h2>Ingredients</h2>
-      <ul>{IngredientList}</ul>
+      <ul className="ingredient-list">{IngredientList}</ul>
       <span>Price: {document.price}:-</span>
       <button onClick={() => navigate(-1)}>Go back</button>
     </div>

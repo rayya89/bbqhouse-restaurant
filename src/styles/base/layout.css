@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script&family=Mulish:wght@400;500;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothong: greyscale;
+  background-color: var(--color-primary);
+  height: 100%;
+}
+
+.App {
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .text-link {
+    color: var(--color-text);
+  }
+
+  .text-link:hover {
+    color: var(--color-secondary);
+  }

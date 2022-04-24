@@ -1,0 +1,15 @@
+button {
+    height: 44px;
+    min-width: 175px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border-radius: var(--border-radius);
+    border-color: var(--color-secondary);
+  }
+
+  .button-secondary {
+    height: 25px;
+    background: none;
+    color: var(--color-secondary);
+    border: none;
+  }

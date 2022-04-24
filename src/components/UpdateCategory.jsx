@@ -21,6 +21,7 @@ export default function UpdateCategory({ formState, categoryState, item }) {
       const index = clonedCategories.findIndex((item) => item.id === data.id)
       clonedCategories[index] = data;
       setCategories(clonedCategories);
+      resetForm();
   }
 
   function resetForm() {
@@ -39,7 +40,6 @@ export default function UpdateCategory({ formState, categoryState, item }) {
       editedItem.imageURL=imageURL;
       editedItem.thumbnail=thumbnail;
     onUpdate(editedItem);
-    resetForm();
   }
 
 //Safeguard

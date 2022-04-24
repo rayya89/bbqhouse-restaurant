@@ -9,7 +9,7 @@ export default function CategoryItem({ item }) {
     const navigate= useNavigate();
 
   return (
-        <div className="filpOrder">
+        <div className="category-container">
             <img src={thumbnail} onClick={() => navigate(`category/${id}`)} alt="category thumbnail"/>
             <article className='category-detail'>
             <h2>{name}</h2>

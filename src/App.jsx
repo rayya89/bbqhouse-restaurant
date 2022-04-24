@@ -10,6 +10,7 @@ import ContactPage from "./pages/ContactPage";
 import AdminPage from "./pages/AdminPage";
 import AdminCategoryPage from "./pages/AdminCategoryPage";
 import NavigationBar from "./components/NavigationBar";
+import "./styles/styles.css";
 
 export default function App() {
   return (

@@ -10,8 +10,8 @@ export default function NavigationBar() {
     <nav>
         <Link to="/"><img src={LogoImage} alt="logo" /></Link>
         <ul>
-            <Link to="menu/"><li>Menu</li></Link>
-            <Link to="/contact"><li>Contact us</li></Link>
+            <Link className="text-link" to="menu/"><li>Menu</li></Link>
+            <Link className="text-link" to="/contact"><li>Contact us</li></Link>
         </ul>
     </nav>
   )
