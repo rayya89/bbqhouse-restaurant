@@ -1,8 +1,8 @@
 // Project files
-import { readCollection, readDocument, getIdByName } from "../scripts/fireStore";
+import { readCollection, readDocument, deleteDocument } from "../scripts/fireStore";
 import { useParams } from "react-router-dom";
 import {useState, useEffect} from 'react'
-import ProductItem from "../components/ProductItem";
+import ProductItem from "../components/AdminProductItem";
 import CreateProduct from '../components/CreateProduct';
 
 
@@ -34,6 +34,14 @@ export default function AdminCategoryPage() {
     setShowForm(true);
   }
 
+  async function onDelete(id) {
+    await deleteDocument(`categories/${categoryId}/content/`,id);
+    const clonedList = [...list];
+    const index = clonedList.findIndex((item) => item.id === id);
+    clonedList.splice(index,1);
+    setList(clonedList);
+  }
+
   //Safeguard
 if (status === 0) return <p>Loading</p>
 if (status === 2) return <p>error</p>
@@ -41,7 +49,7 @@ if (status === 2) return <p>error</p>
 
   //Components
   const ProductList = list.map((item) => (
-    <ProductItem key={item.id} item={item} />
+    <ProductItem key={item.id} item={item} onDelete={onDelete}/>
   ));
   return (
     <div className="category-page">

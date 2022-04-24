@@ -1,10 +1,10 @@
 //NPM Packages
 import {useState, useEffect} from 'react'
-import CategoryItem from '../components/CategoryItem';
+import CategoryItem from '../components/AdminCategoryItem';
 import CreateCategory from '../components/CreateCategory';
 
 // Project files
-import { readCollection } from "../scripts/fireStore";
+import { deleteDocument, readCollection } from "../scripts/fireStore";
 
 export default function AdminPage() {
 //LocalState
@@ -26,9 +26,17 @@ function openForm() {
   setShowForm(true);
 }
 
+async function onDelete(id) {
+  await deleteDocument("categories",id);
+  const clonedCategories = [...categories];
+  const index = clonedCategories.findIndex((item) => item.id === id);
+  clonedCategories.splice(index,1);
+  setCategories(clonedCategories);
+}
+
 //Components
 const CategoryCards = categories.map((item) => (
-  <CategoryItem item= {item} key={item.id}/>
+  <CategoryItem item= {item} key={item.id} onDelete={onDelete}/>
 ));
 
 //Safeguard

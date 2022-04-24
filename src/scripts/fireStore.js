@@ -1,5 +1,5 @@
 //NPM Package
-import { collection, getDocs, doc, getDoc, query, where, setDoc } from "firebase/firestore";
+import { collection, getDocs, doc, getDoc, query, where, setDoc, deleteDoc } from "firebase/firestore";
 
 // Project files
 import { fireStore } from "./firebase"
@@ -37,3 +37,8 @@ export async function createDocument(path, data, id){
     await setDoc(documentPath, data);
 }
 
+//--- Delete
+export async function deleteDocument(path, id) {
+    const documentPath= doc(fireStore, path, id);
+    await deleteDoc(documentPath);
+    }
