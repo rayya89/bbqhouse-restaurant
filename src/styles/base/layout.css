@@ -30,6 +30,10 @@ body {
   li {
     list-style: none;
   }
+
+  ul {
+    padding:0;
+  }
   
   .text-link {
     color: var(--color-text);
