@@ -55,11 +55,11 @@ if (status === 2) return <p>error</p>
     <div className="category-page">
         <section className="category-title">
         <h1>{document.name}</h1>
-        <p>{document.description}</p>
         <button onClick={openForm}>Add new product</button>
         {openForm && <CreateProduct formState={[showForm, setShowForm]} listState={[list,setList]} categoryId={categoryId}/>}
+        </section>
         {ProductList}
-      </section>
+      
 
     </div>
   )

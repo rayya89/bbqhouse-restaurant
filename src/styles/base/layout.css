@@ -37,6 +37,7 @@ body {
   
   .text-link {
     color: var(--color-text);
+    cursor: pointer;
   }
 
   .text-link:hover {

@@ -2,7 +2,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function ProductItem({ item }) {
-    const { id, name, shortDescription, thumbnail } = item;
+    const { id, name, price, thumbnail } = item;
 
 //Properties
   const location = useLocation();
@@ -17,7 +17,7 @@ export default function ProductItem({ item }) {
       />
       <div className="product-detail">
         <h2 onClick={() => navigate(`${location.pathname}/${id}`)}>{name}</h2>
-        <p>{shortDescription}</p>
+        <p>Price: {price}:-</p>
       </div>
     </section>
   )

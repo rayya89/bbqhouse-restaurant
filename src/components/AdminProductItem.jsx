@@ -5,7 +5,7 @@ import UpdateProduct from "./UpdateProduct";
 
 export default function AdminProductItem({ item, onDelete, listState, categoryId }) {
 
-const { id, name, shortDescription, thumbnail } = item;
+const { id, name} = item;
 
 //LocalState
 const [showForm, setShowForm] = useState(false);
@@ -20,19 +20,11 @@ const [showForm, setShowForm] = useState(false);
   }
 
   return (
-    <div className="product-container">
-    <img
-      onClick={() => navigate(`${location.pathname}/${id}`)}
-      src={thumbnail}
-      alt="product thumbnail"
-    />
-    <div className="product-detail">
+    <div className="admin-product-item">
       <h2 onClick={() => navigate(`${location.pathname}/${id}`)}>{name}</h2>
-      <p>{shortDescription}</p>
       <button onClick={() => onDelete(id)}>Delete</button>
       <button onClick={openForm}>Update</button>
         {openForm && <UpdateProduct formState={[showForm, setShowForm]} listState={listState} item={item} categoryId={categoryId}/>}
-    </div>
   </div>
   )
 }
