@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 // Project files
-import { getDocument } from "../scripts/fireStore";
+import { readDocument } from "../scripts/fireStore";
 
 export default function ProductPage() {
     const { categoryId, productId } = useParams();
@@ -17,7 +17,7 @@ export default function ProductPage() {
 
   useEffect(() => {
     async function loadData() {
-        const documentData = await getDocument(`categories/${categoryId}/content/`, productId);
+        const documentData = await readDocument(`categories/${categoryId}/content/`, productId);
         setDocument(documentData);
         setStatus(1);
     }

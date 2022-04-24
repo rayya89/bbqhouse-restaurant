@@ -1,0 +1,25 @@
+{
+    "name": {
+        "label": "Category Name",
+        "placeholder": "Ex: Steak",
+        "type": "text"
+    },
+
+    "description": {
+        "label": "Category Description",
+        "placeholder": "Ex: A great steak menu",
+        "type": "text"
+    },
+
+    "thumbnail": {
+        "label": "Category Thumbnail",
+        "placeholder": "Ex: www.foodi.com/steak.jpg",
+        "type": "text"
+    },
+
+    "imageURL": {
+        "label": "Category Image",
+        "placeholder": "Ex: www.foodi.com/steak.jpg",
+        "type": "text"
+    }
+}

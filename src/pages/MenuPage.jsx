@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import CategoryItem from '../components/CategoryItem';
 
 // Project files
-import { getCollection } from "../scripts/fireStore";
+import { readCollection } from "../scripts/fireStore";
 
 export default function MenuPage() {
 //LocalState
@@ -13,7 +13,7 @@ const [status, setStatus] = useState(0); //0 loading, 1: loaded, 2: error
 //Method
 useEffect(() => {
     async function loadData(path){
-      const data = await getCollection(path);
+      const data = await readCollection(path);
       setCategories(data);
       setStatus(1);
     }

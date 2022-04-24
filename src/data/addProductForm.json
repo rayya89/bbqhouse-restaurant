@@ -1,0 +1,43 @@
+{
+    "name": {
+        "label": "Product Name",
+        "placeholder": "Ex: BuffaloWings",
+        "type": "text"
+    },
+
+    "longDescription": {
+        "label": "Product Long Description",
+        "placeholder": "Ex: A great dish ....",
+        "type": "text"
+    },
+
+    "shortDescription": {
+        "label": "Product Long Description",
+        "placeholder": "Ex: A great dish ....",
+        "type": "text"
+    },
+
+    "price": {
+        "label": "Product Short Description",
+        "placeholder": "Ex: A great dish ....",
+        "type": "number"
+    },
+
+    "ingredients": {
+        "label": "Product Ingredients",
+        "placeholder": "Ex: A great dish ....",
+        "type": "array"
+    },
+
+    "thumbnail": {
+        "label": "Product Thumbnail",
+        "placeholder": "Ex: www.foodi.com/steak.jpg",
+        "type": "text"
+    },
+
+    "imageURL": {
+        "label": "Product Image",
+        "placeholder": "Ex: www.foodi.com/steak.jpg",
+        "type": "text"
+    }
+}
