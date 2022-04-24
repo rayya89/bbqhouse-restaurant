@@ -5,13 +5,13 @@ export default function HomePage() {
 
    
   return (
-    <div className='home-screen'>
+    <div className='home-page'>
         <div className="hero">
             <div className="brand-container">
             <h1>BBQ House</h1>
             <span className='slogan'>Come hungry Leave happy</span>
+            <Link className="text-link" to="/menu">Go to Menu</Link>
             </div>
-            <Link to="menu/">Go to Menu</Link>
         </div>
     </div>
   )

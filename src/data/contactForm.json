@@ -1,0 +1,19 @@
+{
+    "name": {
+        "label": "Full Name:",
+        "placeholder": "ex: John Doe",
+        "type": "text"
+    },
+
+    "email": {
+        "label": "Email:",
+        "placeholder": "ex: JohnDoe@email.com",
+        "type": "text"
+    },
+
+    "date": {
+        "label": "Date and Time:",
+        "placeholder": "",
+        "type": "datetime-local"
+    }
+}

@@ -44,7 +44,7 @@ if (status === 0) return <p>Loading</p>
 if (status === 2) return <p>error</p>
 
   return (
-      <div>
+      <div className="admin-page">
         <p>Welcome! Here you can control the information of the menu and the products of this website</p>
         <button onClick={openForm}>Add new category</button>
         {openForm && <CreateCategory formState={[showForm, setShowForm]} categoryState={[categories,setCategories]}/>}

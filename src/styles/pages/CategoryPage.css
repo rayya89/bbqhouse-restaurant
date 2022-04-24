@@ -1,0 +1,19 @@
+.category-title {
+    background-color: var(--swatch-grey);
+    border-radius: var(--border-radius);
+    height: 25vh;
+    text-align: center;
+    margin-bottom: var(--space-medium);
+  }
+  
+  .category-title h1 {
+    font-family: "Dancing Script", cursive;
+    color: var(--swatch-green-dark);
+    padding-top: var(--space-medium);
+    margin-bottom: var(--space-medium);
+  }
+  
+  .category-page p {
+    margin-bottom: var(--space-medium);
+  }
+  

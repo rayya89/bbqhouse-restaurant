@@ -1,0 +1,16 @@
+.admin-category-detail{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-small);
+    margin-bottom: var(--space-ultra);
+}
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-medium);
+    margin-top: var(--space-ultra);
+}

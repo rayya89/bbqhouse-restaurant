@@ -1,0 +1,56 @@
+.home-page .hero {
+    background-image: url("../../assets/pictures/hero.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    border-radius: var(--border-radius);
+    position: relative;
+    opacity: 75%;
+    margin-bottom: var(--space-medium);
+  }
+  
+  .home-page h1 {
+    font-family: "Architects Daughter", cursive;
+    color: var(--swatch-grey);
+    font-size: 35px;
+    margin-bottom: 0;
+  }
+  
+  .home-page span {
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    color: var(--swatch-grey);
+  }
+  
+  .home-page .brand-container {
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -70%);
+  display: flex;
+  flex-direction: column; 
+  }
+
+  .home-page .text-link {
+      color: var(--swatch-red);
+      font-weight: 800;
+      font-size: 20px;
+  }
+  
+  @media (min-width: 750px) {
+    .home-page h1 {
+      font-size: 90px;
+    }
+  
+    .home-page span {
+      font-size: 30px;
+    }
+
+    .home-page .text-link {
+        font-weight: 900;
+        font-size: 30px;
+    }
+    
+  }
+  

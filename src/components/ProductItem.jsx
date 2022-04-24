@@ -9,7 +9,7 @@ export default function ProductItem({ item }) {
   const navigate = useNavigate();
 
   return (
-    <div className="product-container">
+    <section className="product-container">
       <img
         onClick={() => navigate(`${location.pathname}/${id}`)}
         src={thumbnail}
@@ -19,6 +19,6 @@ export default function ProductItem({ item }) {
         <h2 onClick={() => navigate(`${location.pathname}/${id}`)}>{name}</h2>
         <p>{shortDescription}</p>
       </div>
-    </div>
+    </section>
   )
 }

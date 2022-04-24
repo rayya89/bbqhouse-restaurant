@@ -30,7 +30,8 @@ if (status === 0) return <p>Loading</p>
 if (status === 2) return <p>error</p>
 
   return (
-    <div>MenuPage
+    <div className="menu-page">
+        <h1>Our Menu</h1>
         <section>{CategoryCards}</section>
     </div>   
   )

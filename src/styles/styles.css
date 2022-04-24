@@ -8,3 +8,12 @@
 @import "./components/button.css";
 @import "./components/NavigationBar.css";
 @import "./components/CategoryItem.css";
+@import "./components/ProductItem.css";
+
+/* Pages */
+@import "./pages/ContactPage.css";
+@import "./pages/CategoryPage.css";
+@import "./pages/ProductPage.css";
+@import "./pages/HomePage.css";
+@import "./pages/MenuPage.css";
+@import "./pages/AdminPage.css";

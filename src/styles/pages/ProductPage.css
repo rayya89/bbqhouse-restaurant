@@ -1,0 +1,26 @@
+.product-page {
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .product-page h2 {
+    color: var(--swatch-green-dark);
+  }
+  
+  .product-page img {
+    margin-bottom: var(--space-medium);
+    object-fit: cover;
+    height: 260px;
+  }
+  
+  .product-page p,span {
+    margin-bottom: var(--space-medium);
+  }
+  
+  @media (min-width: 750px) {
+    .product-page img {
+      height: 400px;
+    }
+  }
+  

@@ -1,0 +1,31 @@
+.contact-page img,
+.contact-page section {
+  margin-bottom: var(--space-big);
+}
+
+.contact-page h3 {
+  margin-bottom: var(--space-small);
+}
+
+.contact-page ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.contact-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page input {
+  margin-left: var(--space-small);
+  width: 160px;
+}
+
+.contact-page input::placeholder {
+  color: var(--swatch-grey);
+}
+
+.contact-page label {
+  color: var(--color-secondary);
+}

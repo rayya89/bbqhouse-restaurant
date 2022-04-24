@@ -1,10 +1,13 @@
+import InputField from "../components/InputField"
+import contactForm from "../data/contactForm.json"
+
 export default function ContactPage() {
     //Properties
     const OwnerImage = require("../assets/pictures/owner.jpg");
     const MapImage = require("../assets/pictures/map.jpg");
   
     return (
-      <div className="contact-screen">
+      <div className="contact-page">
         <img src={OwnerImage} alt="the owner of this restaurant" />
         <section>
           <h3>Opening times</h3>
@@ -15,14 +18,10 @@ export default function ContactPage() {
         </section>
         <section>
           <h3>Book a table</h3>
-          {/* Form can be a separate component or at least the input fields */}
           <form>
-            <label>Full Name:</label>
-            <input type="text" placeholder="ex: John Doe" />
-            <label>Email:</label>
-            <input type="email" placeholder="ex: JohnDoe@email.com" />
-            <label>Date and Time:</label>
-            <input type="datetime-local" />
+          <InputField setup={contactForm.name} state={[]}/>
+          <InputField setup={contactForm.email} state={[]}/>
+          <InputField setup={contactForm.date} state={[]}/>
           </form>
         </section>
         <section>

@@ -19,9 +19,9 @@ export default function AdminCategoryItem({ item, onDelete, categoryState }) {
       }
 
   return (
-    <div className="filpOrder">
+    <div className="category-container">
             <img src={thumbnail} onClick={() => navigate(`category/${id}`)} alt="category thumbnail"/>
-            <article className='category-detail'>
+            <article className='admin-category-detail'>
             <h2>{name}</h2>
             <p>{description}</p>
             <button onClick={() => navigate(`category/${id}`)} className="button-secondary">Detailed menu</button>
