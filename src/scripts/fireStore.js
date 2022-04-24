@@ -1,10 +1,19 @@
 //NPM Package
-import { collection, getDocs, doc, getDoc, query, where, setDoc, deleteDoc } from "firebase/firestore";
+import { collection, doc } from "firebase/firestore";
+import { getDocs, getDoc, setDoc, deleteDoc } from "firebase/firestore";
+
 
 // Project files
 import { fireStore } from "./firebase"
 
 // Methods
+//--- Create
+export async function createDocument(path, data, id){
+    const documentPath = doc(fireStore, path, id);
+    await setDoc(documentPath, data);
+}
+
+//------Read
 export async function readDocument(path, id) {
     const documentPath = doc(fireStore, path, id);
     const document = await getDoc(documentPath);
@@ -20,21 +29,11 @@ export async function readCollection(path) {
     return documents;
 }
 
-// export async function getIdByName(path, value) {
-
-//     const collectionPath = collection(fireStore, path);
-//     const queryResult = query(collectionPath, where("name", "==", value));
-//     const querySnapshot = await getDocs(queryResult);
-//     querySnapshot.forEach((doc) => {
-//     //   console.log(doc.id, " => ", doc.data());
-//     return doc.id;
-//     });
-// }
-
-//--- Create
-export async function createDocument(path, data, id){
-    const documentPath = doc(fireStore, path, id);
-    await setDoc(documentPath, data);
+//--- Update
+export async function updateDocument(path, data) {
+    const id= data.id;
+    const documentPath= doc(fireStore, path, id);
+    await setDoc(documentPath, data)
 }
 
 //--- Delete
@@ -42,3 +41,6 @@ export async function deleteDocument(path, id) {
     const documentPath= doc(fireStore, path, id);
     await deleteDoc(documentPath);
     }
+
+
+

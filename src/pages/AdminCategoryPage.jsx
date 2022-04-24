@@ -49,7 +49,7 @@ if (status === 2) return <p>error</p>
 
   //Components
   const ProductList = list.map((item) => (
-    <ProductItem key={item.id} item={item} onDelete={onDelete}/>
+    <ProductItem key={item.id} item={item} onDelete={onDelete} listState={[list, setList]} categoryId={categoryId}/>
   ));
   return (
     <div className="category-page">

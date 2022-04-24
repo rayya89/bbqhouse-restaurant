@@ -36,7 +36,7 @@ async function onDelete(id) {
 
 //Components
 const CategoryCards = categories.map((item) => (
-  <CategoryItem item= {item} key={item.id} onDelete={onDelete}/>
+  <CategoryItem item= {item} key={item.id} onDelete={onDelete} categoryState={[categories, setCategories]}/>
 ));
 
 //Safeguard

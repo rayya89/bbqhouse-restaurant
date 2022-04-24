@@ -1,5 +1,5 @@
 // Project files
-import { readCollection, readDocument, getIdByName } from "../scripts/fireStore";
+import { readCollection, readDocument } from "../scripts/fireStore";
 import { useParams } from "react-router-dom";
 import {useState, useEffect} from 'react'
 import ProductItem from "../components/ProductItem"
