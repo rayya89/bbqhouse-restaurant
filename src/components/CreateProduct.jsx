@@ -50,7 +50,7 @@ if (!showForm) return null;
 
 
   return (
-    <div>
+    <div className="admin-form">
     <section className="create-product">
       <form onSubmit={onCreate}>
       <h2>Create a new product and add it to the Category Menu</h2>

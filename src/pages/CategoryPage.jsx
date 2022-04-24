@@ -42,9 +42,8 @@ if (status === 2) return <p>error</p>
         <section className="category-title">
         <h1>{document.name}</h1>
         <p>{document.description}</p>
+        </section>
         {ProductList}
-      </section>
-
     </div>
   )
 }

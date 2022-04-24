@@ -41,7 +41,7 @@ export default function CreateCategory({ formState, categoryState }) {
 if (!showForm) return null;
 
   return (
-    <div>
+    <div className="admin-form">
       <section className="create-category">
       <form onSubmit={onCreate}>
       <h2>Create a category and add it to the Menu</h2>

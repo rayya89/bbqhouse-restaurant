@@ -54,8 +54,8 @@ function resetForm() {
 if (!showForm) return null;
 
   return (
-    <div>
-    <section className="create-product">
+    <div className="admin-form">
+    <section className="update-product">
       <form onSubmit={updateFields}>
       <h2>Update the product</h2>
       <InputField setup={addProduct.name} state={[name,setName]}/>

@@ -10,6 +10,13 @@ body {
   height: 100%;
 }
 
+.category-page,
+.contact-page,
+.product-page {
+  padding: var(--space-medium) var(--space-big);
+}
+
+
 .App {
     box-sizing: border-box;
   }
@@ -30,4 +37,13 @@ body {
 
   .text-link:hover {
     color: var(--color-secondary);
+  }
+
+  @media (min-width: 750px) {
+    .category-page,
+    .contact-page,
+    .product-page {
+      max-width: 960px;
+      margin: 0 auto;
+    }
   }

@@ -46,8 +46,8 @@ export default function UpdateCategory({ formState, categoryState, item }) {
 if (!showForm) return null;
 
   return (
-    <div>
-      <section className="create-category">
+    <div className="admin-form">
+      <section className="update-category">
       <form onSubmit={updateFields}>
       <h2>Update the category</h2>
       <InputField setup={addCategory.name} state={[name,setName]}/>

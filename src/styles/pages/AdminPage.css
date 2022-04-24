@@ -14,3 +14,25 @@ display: flex;
     gap: var(--space-medium);
     margin-top: var(--space-ultra);
 }
+
+
+.admin-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+
+  }
+  
+  .admin-form input {
+    margin-left: var(--space-small);
+    width: 160px;
+  }
+  
+  .admin-form input::placeholder {
+    color: var(--swatch-grey);
+  }
+  
+  .admin-form label {
+    color: var(--color-secondary);
+  }
