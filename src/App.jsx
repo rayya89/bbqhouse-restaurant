@@ -18,6 +18,7 @@ export default function App() {
       <BrowserRouter>
       <NavigationBar />
         <Routes>
+          {/* Here is acceptable to use catId instead of categoryId to have everthing in 1 line */}
           <Route path="/" element={<HomePage/>}/>
           <Route path="menu/" element={<MenuPage/>}/>
           <Route path="menu/category/:categoryId" element={<CategoryPage />} />

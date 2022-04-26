@@ -2,9 +2,9 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function ProductItem({ item }) {
-    const { id, name, shortDescription, thumbnail } = item;
+  const { id, name, shortDescription, thumbnail } = item;
 
-//Properties
+  //Properties
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -20,5 +20,5 @@ export default function ProductItem({ item }) {
         <p>{shortDescription}</p>
       </div>
     </section>
-  )
+  );
 }

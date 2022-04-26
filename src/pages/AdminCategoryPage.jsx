@@ -1,13 +1,17 @@
 // Project files
-import { readCollection, readDocument, deleteDocument } from "../scripts/fireStore";
+import {
+  readCollection,
+  readDocument,
+  deleteDocument,
+} from "../scripts/fireStore";
 import { useParams } from "react-router-dom";
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from "react";
 import ProductItem from "../components/AdminProductItem";
-import CreateProduct from '../components/CreateProduct';
+import CreateProduct from "../components/CreateProduct";
 
-
+// The format is different to the real prettier one -1
+// The component is too long (and yes im counting after the Prettier format) -1
 export default function AdminCategoryPage() {
-
   const { categoryId } = useParams();
 
   // Local state
@@ -35,32 +39,42 @@ export default function AdminCategoryPage() {
   }
 
   async function onDelete(id) {
-    await deleteDocument(`categories/${categoryId}/content/`,id);
+    await deleteDocument(`categories/${categoryId}/content/`, id);
     const clonedList = [...list];
     const index = clonedList.findIndex((item) => item.id === id);
-    clonedList.splice(index,1);
+    clonedList.splice(index, 1);
     setList(clonedList);
   }
 
   //Safeguard
-if (status === 0) return <p>Loading</p>
-if (status === 2) return <p>error</p>
-
+  if (status === 0) return <p>Loading</p>;
+  if (status === 2) return <p>error</p>;
 
   //Components
   const ProductList = list.map((item) => (
-    <ProductItem key={item.id} item={item} onDelete={onDelete} listState={[list, setList]} categoryId={categoryId}/>
+    <ProductItem
+      key={item.id}
+      item={item}
+      onDelete={onDelete}
+      listState={[list, setList]}
+      categoryId={categoryId}
+    />
   ));
   return (
     <div className="category-page">
-        <section className="category-title">
+      <section className="category-title">
         <h1>{document.name}</h1>
         <p>{document.description}</p>
         <button onClick={openForm}>Add new product</button>
-        {openForm && <CreateProduct formState={[showForm, setShowForm]} listState={[list,setList]} categoryId={categoryId}/>}
+        {openForm && (
+          <CreateProduct
+            formState={[showForm, setShowForm]}
+            listState={[list, setList]}
+            categoryId={categoryId}
+          />
+        )}
         {ProductList}
       </section>
-
     </div>
-  )
+  );
 }
